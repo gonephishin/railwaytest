@@ -1,4 +1,15 @@
+h1 {
+  font-family: "Papyrus"
+}
 
+p {
+  font-family: "Comic Sans"
+}
+
+img {
+  height: 250px;
+  width: auto;
+}
 
 .hover_img a {
   position:relative;
