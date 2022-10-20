@@ -1,9 +1,9 @@
 h1 {
-  font-family: "Papyrus"
+  font-family: "Papyrus";
 }
 
 p {
-  font-family: "Comic Sans"
+  font-family: "Comic Sans";
 }
 
 img {
@@ -30,5 +30,51 @@ img {
   display: inline-block;
   width: 250px;
   height: 250px;
+}
+
+.marquee {
+ background: limegreen;
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+}
+.marquee h2 {
+ font-size: 18px;
+ color: black;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 24px;
+ text-align: center;
+
+/* moves things */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%);	
+ -moz-animation: example1 15s linear infinite;
+ -webkit-animation: example1 15s linear infinite;
+ animation: example1 15s linear infinite;
+}
+
+@-moz-keyframes example1 {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes example1 {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes example1 {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%); 
+ }
 }
 
